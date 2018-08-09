@@ -2,6 +2,6 @@
 output: md_document
 ---
 
-# dr4pl 0.1.0
+# dr4pl 1.1.1
 
-First copy of this package. No new features.
+mostly cleanup and documentation

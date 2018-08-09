@@ -1,0 +1,20 @@
+ # Only use spaces to indent your .yml configuration.
+ image: rocker/ropensci:latest
+ 
+ pipelines:
+   default:
+     - step:
+         caches:
+           - rdeps
+         script:
+           - cd /opt/atlassian/pipelines/agent/build
+           #- ./makefile
+           - R -e 'devtools::install_deps(dependencies = TRUE)'
+           - R -e 'devtools::document(roclets=c("rd", "collate", "namespace", "vignette"))'
+           - R -e 'knitr::opts_chunk$set(fig.path="inst/image/");knitr::knit("README.Rmd")'
+           - R -e 'devtools::check(cran=TRUE);devtools::build()' #manual=FALSE, vignette=FALSE
+           #- R -e 'devtools::build_win()'
+           #https://confluence.atlassian.com/bitbucket/publish-and-link-your-build-artifacts-872137736.html
+ definitions:
+  caches:
+    rdeps: /usr/local/lib/R/site-library

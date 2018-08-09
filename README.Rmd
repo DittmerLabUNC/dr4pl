@@ -22,9 +22,9 @@ knitr::opts_chunk$set(
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/dr4pl)](https://cran.r-project.org/package=dr4pl)
 
-#release version:
+#release version:	
 
-[![packageversion](https://img.shields.io/badge/GitHub%20Package%20version-1.0.0-orange.svg?style=flat-square)](commits/master)
+[![packageversion](https://img.shields.io/badge/GitHub%20Package%20version-1.1.2-orange.svg?style=flat-square)](commits/master)
 
 ##dr4pl
 
