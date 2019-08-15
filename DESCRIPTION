@@ -2,7 +2,7 @@ Package: dr4pl
 Type: Package
 Date: 2019-1-28
 Title: Dose Response Data Analysis using the 4 Parameter Logistic (4pl) Model
-Version: 1.1.8
+Version: 1.1.9
 Depends: R (>= 3.1.0)
 Authors@R: c(person("Justin T.", "Landis", rol = c("aut", "cre"), email = "jtlandis314@gmail.com"),
              person("Hyowon", "An", role = "aut", email = "ahwbest@gmail.com"),
