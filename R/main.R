@@ -147,8 +147,8 @@ dr4pl.data.frame <- function(data,
                           level = 0.9999,
                           failure.message = FALSE,
                           ...) {
-  dose <- data[,deparse(substitute(dose))]
-  response <- data[,deparse(substitute(response))]
+  dose <- eval(substitute(dose),data)
+  response <- eval(substitute(response),data)
   obj <- dr4pl.default(dose = dose,
                        response = response,
                        init.parm = init.parm,
