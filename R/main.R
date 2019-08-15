@@ -219,7 +219,7 @@ dr4pl.default <- function(dose,
   
   types.trend <- c("auto", "decreasing", "increasing")
   types.method.init <- c("logistic", "Mead")
-  types.method.optim <- c("Nelder-Mead", "BFGS", "CG", "SANN")
+  types.method.optim <- c("Nelder-Mead", "BFGS", "CG", "L-BFGS-B", "SANN")
   
   ### Check errors in functions arguments
   if(!is.numeric(dose)||!is.numeric(response)) {
