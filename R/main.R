@@ -336,7 +336,9 @@ dr4pl.default <- function(dose,
                            method.robust = method.robust.new,
                            method.optim = method.optim,
                            use.Hessian = use.Hessian,
-                           level = level)
+                           level = level,
+                           upperl = upperl,
+                           lowerl = lowerl)
 
     obj.robust$call <- match.call()
     class(obj.robust) <- "dr4pl"
