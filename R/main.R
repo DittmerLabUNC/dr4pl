@@ -414,6 +414,8 @@ dr4pl.default <- function(dose,
 #' @param use.Hessian Indicator of whether the Hessian matrix (TRUE) or the
 #' gradient vector is used in the Hill bounds.
 #' @param level Confidence level to be used in Hill bounds computation.
+#' @param upperl upper limit to init.parm
+#' @param lowerl lower limit to init.parm
 #' 
 #' @return List of final parameter estimates, name of robust estimation, loss value
 #' and so on.
