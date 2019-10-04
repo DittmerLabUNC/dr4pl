@@ -5,7 +5,7 @@
 \title{Private function to fit the 4PL model to dose-response data}
 \usage{
 dr4plEst(dose, response, init.parm, trend, method.init, method.optim,
-  method.robust, use.Hessian, level)
+  method.robust, use.Hessian, level, upperl, lowerl)
 }
 \arguments{
 \item{dose}{Vector of dose levels}
