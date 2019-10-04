@@ -19,3 +19,6 @@ Following proper semantic versioning.
 Bug fix update.
   dr4pl.data.frame will no longer fail when using tibbles as an input.
   "L-BFGS-B" is now a usable argument to the parameter 'method.optim' as originally intended.
+
+General changes and updates 
+  default value of method.robust is now set to "squared" to be more conistent with other values given.

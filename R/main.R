@@ -92,7 +92,7 @@ dr4pl.formula <- function(formula,
                           init.parm = NULL,
                           trend = "auto",
                           method.init = "Mead",
-                          method.robust = NULL,
+                          method.robust = "squared",
                           method.optim = "Nelder-Mead",
                           use.Hessian = FALSE,
                           level = 0.9999,
@@ -141,7 +141,7 @@ dr4pl.data.frame <- function(data,
                           init.parm = NULL,
                           trend = "auto",
                           method.init = "Mead",
-                          method.robust = NULL,
+                          method.robust = "squared",
                           method.optim = "Nelder-Mead",
                           use.Hessian = FALSE,
                           level = 0.9999,
@@ -210,7 +210,7 @@ dr4pl.default <- function(dose,
                           init.parm = NULL,
                           trend = "auto",
                           method.init = "Mead",
-                          method.robust = NULL,
+                          method.robust = "squared",
                           method.optim = "Nelder-Mead",
                           use.Hessian = FALSE,
                           level = 0.9999,
@@ -263,7 +263,7 @@ dr4pl.default <- function(dose,
   class(obj) <- "dr4pl"
   
   # If any robust estimation method is indicated, report outliers to a user.
-  if(!is.null(method.robust)) {
+  if(!method.robust=="squared") {
     
     theta <- obj$parameters  # Robust parameter estimates
     residuals <- Residual(theta, dose, response)  # Residuals
