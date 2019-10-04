@@ -30,7 +30,16 @@ dr4pl <- function(...)  UseMethod("dr4pl")
 #' form 'response ~ dose' or as a data frame with response values in first
 #' column and dose values in second column.
 #' @param data Data frame containing variables in the model.
-#' @param init.parm Vector of initial parameters to be optimized in the model.
+#' @param init.parm Either Null or a Vector of initial parameters to be optimized in the model.
+#' \itemize{
+#'   \item UpperLimit:  \eqn{\theta[1]}
+#'   \item IC50/EC50: \eqn{\theta[2]}
+#'   \item Slope: \eqn{\theta[3]}
+#'   \item LowerLimit: \eqn{\theta[4]}
+#' }
+#' dr4pl assumes \eqn{\theta[1]>\theta[4]}. Note that when using upperl and
+#' lowerl, the user may need to set this parameter because the estimated
+#' parameters may not be within the feasible region. 
 #' @param trend Indicator of whether a dose-response curve is a decreasing 
 #' \eqn{\theta[3]<0} or increasing curve \eqn{\theta[3]>0}. The default is "auto" 
 #' which indicates that the trend of the curve is automatically determined by
@@ -53,6 +62,18 @@ dr4pl <- function(...)  UseMethod("dr4pl")
 #' @param failure.message Indicator of whether a message indicating attainment of
 #' the Hill bounds and possible resolutions will be printed to the console (TRUE)
 #' or hidden (FALSE).
+#' @param upperl Either NULL or a numeric vector of length 4 that specifies the upper limit 
+#' for the initial parameters of \eqn{c(\theta[1],\theta[2],\theta[3],\theta[4])} during the
+#' optimization process. By default no upperl is assumed. If the user wants to constain only
+#' some parameter values, set desired numeric bound in the appropriate position and fill Inf
+#' to impose no upper bounds on other values. All upperl values must be greater than 
+#' corresponding initalized parameters.
+#' @param lowerl Either NULL or a numeric vector of length 4 that specifies the lower limit 
+#' for the initial parameters of \eqn{c(\theta[1],\theta[2],\theta[3],\theta[4])} during the
+#' optimization process. By default no lowerl is assumed. If the user wants to constain only
+#' some parameter values, set desired numeric bound in the appropriate position and fill -Inf
+#' to impose no lower bounds on other values. All lowerl values must be greater than 
+#' corresponding initalized parameters.
 #' @param ... Further arguments to be passed to \code{constrOptim}.
 #' 
 #' @return A 'dr4pl' object for which "confint", "gof", "print" and "summary"

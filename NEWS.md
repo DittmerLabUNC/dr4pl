@@ -22,3 +22,6 @@ Bug fix update.
 
 General changes and updates 
   default value of method.robust is now set to "squared" to be more conistent with other values given.
+  Added upperl and lowerl arguments to dr4pl call. User can now constrain optimization of theta parameters.
+    This may require user to set init.parm as the estimated theta parameters will not always be within
+    the fesiable region specified by upperl and lowerl.

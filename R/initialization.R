@@ -257,7 +257,7 @@ FindLogisticGrids <- function(x, y, retheta.init, use.Hessian = FALSE) {
 FindInitialParms <- function(x, y,
                              trend = "auto",
                              method.init = "Mead",
-                             method.robust = "squared",) {
+                             method.robust = "squared") {
 
   n.grid.cells <- 25
   
