@@ -21,7 +21,7 @@ addons:
       - r-cran-ape
       - r-cran-ggplot2
       - r-cran-testthat
-      - r-cran-hdf5
+#      - r-cran-hdf5
       - r-cran-gsl
       - r-cran-knitr
       - r-cran-stringi
