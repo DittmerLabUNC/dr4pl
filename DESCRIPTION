@@ -1,6 +1,6 @@
 Package: dr4pl
 Type: Package
-Date: 2019-1-28
+Date: 2019-10-07
 Title: Dose Response Data Analysis using the 4 Parameter Logistic (4pl) Model
 Version: 1.1.9
 Depends: R (>= 3.1.0)
