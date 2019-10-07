@@ -16,7 +16,7 @@ cran status:
 release version:
 ================
 
-[![packageversion](https://img.shields.io/badge/GitHub%20Package%20version-1.1.10-orange.svg?style=flat-square)](commits/master)
+[![packageversion](https://img.shields.io/badge/GitHub%20Package%20version-1.1.11-orange.svg?style=flat-square)](https://github.com/DittmerLabUNC/dr4pl)
 
 dr4pl
 -----
